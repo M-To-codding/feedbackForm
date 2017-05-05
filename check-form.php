@@ -20,5 +20,19 @@ if(isset($_POST["send"])){
     $_SESSION['message'] = $message;
 
     require_once 'error-handler.php';
+    if (!$error) {
+        mail($to, $subject, $message);
 
+        echo "<div class='accept'>Mail was sent</div>
+        <div class='sent-data'>Sent data: 
+             <ul>
+                <li>Your mail: $from</li>
+                <li>Acceptor mail: $to</li>
+                <li>Subject: $subject</li>
+                <li>Message: $message</li>
+            </ul>            
+        </div>
+        <a class='new-msg' href='feedback-form.php'>Send new message</a>
+        ";
+    }
 }

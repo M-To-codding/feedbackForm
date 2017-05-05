@@ -10,6 +10,7 @@ require_once 'check-form.php';
 <head>
     <meta charset="UTF-8">
     <title>Feedback form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -29,11 +30,13 @@ require_once 'check-form.php';
                value="<?=$_SESSION['subject']?>">
     </label>
     <span class="error"><?=$data_error?></span>
-    <label for="message"> Message
-        <textarea name="message" id="message" cols="30" rows="10">
+    <label for="message" class="textarea-label">
+        <div>Message</div>
+        <textarea name="message" id="message" cols="21" rows="5">
                <?=$_SESSION['message']?></textarea>
+        <span class="error textarea-err"><?=$data_error?></span>
     </label>
-    <span class="error"><?=$data_error?></span>
+
     <input type="submit" name="send" value="Send"/>
 </form>
 

@@ -1,0 +1,63 @@
+body {
+    max-width: 800px;
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+
+form {
+    display: block;
+    margin: 20px auto;
+    padding: 0 31%;
+}
+
+label {
+    display: inline-block;
+    margin: 5px auto;
+}
+
+label input{
+    display: block;
+    margin: 5px auto;
+}
+label textarea{
+    resize: none;
+    float: left;
+}
+
+.error  {
+    color: red;
+}
+
+.accept, .new-msg  {
+    color: white;
+    background-color: green;
+    display: inline-block;
+    padding: 2px 0;
+    text-align: center;
+    width: 302px;
+}
+
+.new-msg {
+    background-color: #5e54aa;
+}
+
+.sent-data {
+    display: block;
+    border: 1px ridge #5e54aa;
+    width: 280px;
+    padding: 10px;
+}
+
+
+.textarea-err {
+    margin-top: 10px;
+    float: right;
+}
+
+.textarea-label {
+    width: 100%;
+}
+.textarea-label>div {
+    margin-bottom: 5px;
+}
